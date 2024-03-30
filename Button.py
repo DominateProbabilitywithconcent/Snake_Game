@@ -33,13 +33,33 @@ class StartButton(Button):
         if event.type == pygame.MOUSEBUTTONDOWN:
              if mouse[0] > self.x and mouse[0] < self.x + self.width:
                 if mouse[1] > self.y and mouse[1] < self.y + self.length:
-                    game.state = True
+                    game.state = 1
 class ResetButton(Button):
     def Is_clicked(self, event, mouse,game,board,exit,start,reset,snake):
         if event.type == pygame.MOUSEBUTTONDOWN:
              if mouse[0] > self.x and mouse[0] < self.x + self.width:
                 if mouse[1] > self.y and mouse[1] < self.y + self.length:
                     game.Reset(board,exit,start,reset,snake)
+class BFSButton(Button):
+    def Is_clicked(self, event, mouse,game):
+        if event.type == pygame.MOUSEBUTTONDOWN:
+             if mouse[0] > self.x and mouse[0] < self.x + self.width:
+                if mouse[1] > self.y and mouse[1] < self.y + self.length:
+                    game.state = 2
+class DFSButton(Button):
+    def Is_clicked(self, event, mouse,game):
+        if event.type == pygame.MOUSEBUTTONDOWN:
+             if mouse[0] > self.x and mouse[0] < self.x + self.width:
+                if mouse[1] > self.y and mouse[1] < self.y + self.length:
+                    game.state = 3
+class AStarButton(Button):
+    def Is_clicked(self, event, mouse,game):
+        if event.type == pygame.MOUSEBUTTONDOWN:
+             if mouse[0] > self.x and mouse[0] < self.x + self.width:
+                if mouse[1] > self.y and mouse[1] < self.y + self.length:
+                    game.state = 4
+                    
+
                     
     
     
